@@ -12,12 +12,7 @@ public class Main {
             }
         };
 
-        Operation<Integer> subtractInt = new Operation<>() {
-            @Override
-            public Integer execute(Integer a, Integer b) {
-                return a - b;
-            }
-        };
+        Operation<Integer> subtractInt = (a, b) -> a - b;
 
 
         integerCalculator.performOperation(20, 5, addInt);
