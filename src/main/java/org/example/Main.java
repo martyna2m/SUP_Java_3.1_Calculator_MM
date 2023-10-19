@@ -20,23 +20,21 @@ public class Main {
         };
 
 
-
-        Calculator<Double> doubleCalculator = new Calculator<>();
-
-
-        Operation<Double> multiplyDouble = (a, b) -> a * b;
-        Operation<Double> divideDouble = (a, b) -> a / b;
-
-
-
-
         integerCalculator.performOperation(20, 5, addInt);
 
         integerCalculator.performOperation(20, 5, extractInt);
 
-        doubleCalculator.performOperation(20.0, 5.0, multiplyDouble);
+        Calculator<Double> doubleCalculator = new Calculator<>();
 
-        doubleCalculator.performOperation(20.0, 5.0, divideDouble);
+
+        doubleCalculator.performOperation(20.0, 5.0, (a, b) -> a * b);
+        doubleCalculator.performOperation(20.0, 5.0, (a, b) -> a / b);
+
+
+
+
+
+
     }
 
 }
