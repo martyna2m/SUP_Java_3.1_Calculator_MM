@@ -12,7 +12,7 @@ public class Main {
             }
         };
 
-        Operation<Integer> extractInt = new Operation<>() {
+        Operation<Integer> subtractInt = new Operation<>() {
             @Override
             public Integer execute(Integer a, Integer b) {
                 return a - b;
@@ -22,7 +22,7 @@ public class Main {
 
         integerCalculator.performOperation(20, 5, addInt);
 
-        integerCalculator.performOperation(20, 5, extractInt);
+        integerCalculator.performOperation(20, 5, subtractInt);
 
 
         Calculator<Double> doubleCalculator = new Calculator<>();
