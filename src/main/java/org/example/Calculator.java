@@ -1,13 +1,13 @@
 package org.example;
 
-public class Calculator<T>  {
+public class Calculator<T> {
 
 
     public Calculator() {
     }
 
-    public void performOperation(T a, T b, Operation<T> operation) {
-        System.out.println("Result = " + operation.execute(a, b));
+    public T performOperation(T a, T b, Operation<T> operation) {
+        return operation.execute(a, b);
 
     }
 

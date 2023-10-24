@@ -15,19 +15,16 @@ public class Main {
         Operation<Integer> subtractInt = (a, b) -> a - b;
 
 
-        integerCalculator.performOperation(20, 5, addInt);
+        Printer.printResult(integerCalculator.performOperation(20, 5, addInt));
 
-        integerCalculator.performOperation(20, 5, subtractInt);
+        Printer.printResult(integerCalculator.performOperation(20, 5, subtractInt));
 
 
         Calculator<Double> doubleCalculator = new Calculator<>();
 
-        doubleCalculator.performOperation(20.0, 5.0, (a, b) -> a * b);
-        doubleCalculator.performOperation(20.0, 5.0, (a, b) -> a / b);
-
+        Printer.printResult(doubleCalculator.performOperation(20.0, 5.0, (a, b) -> a * b));
+        Printer.printResult(doubleCalculator.performOperation(20.0, 5.0, (a, b) -> a / b));
 
     }
 
 }
-
-
